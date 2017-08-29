@@ -17,6 +17,7 @@ const person = {
 
 const blacklist = ['name'];
 
-const sealedPerson = protectObject(person, blacklist);
+const sealedPerson = protectObject(person, blacklist); // TODO: Add blacklist as second step
 delete sealedPerson.age;
 delete sealedPerson.name;
+console.log(sealedPerson);
