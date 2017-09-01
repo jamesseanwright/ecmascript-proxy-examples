@@ -2,9 +2,19 @@
 
 const http = require('http');
 const url = require('url');
+const striptags = require('striptags');
 const readBody = require('./readBody');
-const connectToDb = require('./db'); // pretend this is a third-party database lib...
+const connectToDb = require('./db'); // pretend this is a third-party database lib we can't modify...
 const db = connectToDb();
+
+const protectedSet = new Proxy(db.set, {
+    apply(target, thisArg, argumentsList) {
+        const [ key, value ] = argumentsList;
+        const escapedValue = striptags(value);
+
+        target.call(thisArg, key, escapedValue);
+    }
+});
 
 const PORT = 8080;
 const HOME_KEY = 'home';
@@ -19,7 +29,7 @@ const routes = new Map([
 
     ['POST', new Map([
         ['/update-home-content', (req, res) => readBody(req)
-            .then(body => db.set(HOME_KEY, body))
+            .then(body => protectedSet(HOME_KEY, body))
             .then(() => {
                 res.writeHead(200);
                 res.end('OK');

@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jamesseanwright/ecmascript-proxy-examples/issues"
   },
-  "homepage": "https://github.com/jamesseanwright/ecmascript-proxy-examples#readme"
+  "homepage": "https://github.com/jamesseanwright/ecmascript-proxy-examples#readme",
+  "dependencies": {
+    "striptags": "3.1.0"
+  }
 }
