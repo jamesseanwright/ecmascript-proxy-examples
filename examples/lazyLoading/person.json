@@ -1,0 +1,45 @@
+{
+    "_id": "59ac1d110ec7034420c7fcff",
+    "index": 0,
+    "guid": "2804b28d-e995-4e91-addb-2aa954f6daf3",
+    "isActive": true,
+    "balance": "$1,061.71",
+    "picture": "http://placehold.it/32x32",
+    "age": 23,
+    "eyeColor": "brown",
+    "name": "Joe Bloggs",
+    "gender": "male",
+    "company": "GEEKFARM",
+    "email": "oneillboyle@geekfarm.com",
+    "phone": "+1 (841) 444-2199",
+    "address": "503 Laurel Avenue, Bangor, Alabama, 6584",
+    "about": "Pariatur esse ea consequat ullamco sint excepteur non qui veniam laborum labore culpa velit do. Sint ad voluptate dolore nisi excepteur duis excepteur. Magna ipsum pariatur duis eiusmod consequat ipsum irure cillum officia consectetur dolor. Magna sit fugiat ipsum nulla amet adipisicing incididunt laboris. Qui magna nisi exercitation id reprehenderit. Culpa consequat Lorem incididunt aliqua reprehenderit aliquip excepteur fugiat pariatur excepteur ex do officia irure.\r\n",
+    "registered": "2014-02-02T04:40:01 -00:00",
+    "latitude": -11.545752,
+    "longitude": 176.13747,
+    "tags": [
+        "ad",
+        "in",
+        "ipsum",
+        "magna",
+        "esse",
+        "ex",
+        "dolore"
+    ],
+    "friends": [
+        {
+            "id": 0,
+            "name": "Humphrey Ingram"
+        },
+        {
+            "id": 1,
+            "name": "Zamora Bentley"
+        },
+        {
+            "id": 2,
+            "name": "Gross Shannon"
+        }
+    ],
+    "greeting": "Hello, Oneill Boyle! You have 8 unread messages.",
+    "favoriteFruit": "apple"
+}
