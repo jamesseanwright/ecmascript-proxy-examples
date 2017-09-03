@@ -24,7 +24,7 @@ function memoise(func) {
     });
 }
 
-const add = (...args) => args.reduce((total, number) => total += number, 0);
+const add = (...args) => args.reduce((total, number) => total + number, 0);
 const memoisedAdd = memoise(add);
 
 console.log(memoisedAdd(5, 3));
