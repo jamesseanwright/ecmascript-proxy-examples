@@ -19,7 +19,7 @@ const ValidatingCar = new Proxy(Car, {
         }
 
         return new Constructor(...args);
-    }
+    },
 });
 
 const car = new ValidatingCar(2);

@@ -9,7 +9,7 @@ const formatter = new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
-    second: 'numeric'
+    second: 'numeric',
 });
 
 const getFormattedDate = () => formatter.format(new Date());

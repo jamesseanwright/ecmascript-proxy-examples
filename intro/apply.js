@@ -7,7 +7,7 @@ const round = new Proxy(Math.round, {
         }
 
         return target.apply(thisArg, args);
-    }
+    },
 });
 
 console.log(round(5.5));

@@ -13,7 +13,7 @@ const set = new Proxy(unprotectedSet, {
         const escapedValue = striptags(value);
 
         target.call(thisArg, key, escapedValue);
-    }
+    },
 });
 
 const PORT = 8080;
@@ -40,7 +40,7 @@ const routes = new Map([
 
 const server = http.createServer((req, res) => {
     const routesForMethod = routes.get(req.method);
-    const { pathname } = url.parse(req.url)
+    const { pathname } = url.parse(req.url);
 
     if (!routesForMethod.has(pathname)) {
         res.writeHead(404);

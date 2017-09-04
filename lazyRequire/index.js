@@ -13,7 +13,7 @@ function lazyLoadObject(path) {
             }
 
             return result[prop];
-        }
+        },
     });
 }
 

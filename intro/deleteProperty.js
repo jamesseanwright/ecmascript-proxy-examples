@@ -11,7 +11,7 @@ const loggingCache = new Proxy(cache, {
         delete target[prop];
         console.log(`Deleted ${prop} from cache`);
         return true;
-    }
+    },
 });
 
 console.log(cache);

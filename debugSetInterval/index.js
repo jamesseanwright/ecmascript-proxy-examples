@@ -8,10 +8,10 @@ function debugSetInterval() {
             const [ callback, delay, ...additionalArgs ] = args;
             const timeout = originalSetInterval(() => callback(...additionalArgs), delay);
 
-            console.log(`Interval created! Total:`, ++intervalCount);
+            console.log('Interval created! Total:', ++intervalCount);
 
             return timeout;
-        }
+        },
     });
 
     global.clearInterval = new Proxy(global.clearInterval, {
@@ -19,12 +19,12 @@ function debugSetInterval() {
             const [ timeout ] = args;
 
             originalClearInterval(timeout);
-            console.log(`Interval cleared! Total:`, --intervalCount);
-        }
+            console.log('Interval cleared! Total:', --intervalCount);
+        },
     });
 }
 
-debugSetInterval()
+debugSetInterval();
 
 const firstInterval = setInterval(
     (firstMessage, secondMessage) => console.log(`${firstMessage} ${secondMessage}`),

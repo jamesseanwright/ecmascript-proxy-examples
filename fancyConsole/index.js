@@ -29,7 +29,7 @@ const fancyConsole = new Proxy(console, {
         }
 
         return target[prop];
-    }
+    },
 });
 
 fancyConsole.log('Hello', 'JS', 'Roundabout!');

@@ -20,7 +20,7 @@ function memoise(func) {
             computations.set(key, result);
 
             return result;
-        }
+        },
     });
 }
 
