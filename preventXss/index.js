@@ -5,9 +5,9 @@ const url = require('url');
 const striptags = require('striptags');
 const readBody = require('./readBody');
 const connectToDb = require('./db'); // pretend this is a third-party database lib we can't modify...
-const { get, set: unprotectedSet } = connectToDb();
+const { get, set } = connectToDb();
 
-const set = new Proxy(unprotectedSet, {
+const protectedSet = new Proxy(set, {
     apply(target, thisArg, argumentsList) {
         const [ key, value ] = argumentsList;
         const escapedValue = striptags(value);
