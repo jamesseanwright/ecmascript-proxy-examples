@@ -2,7 +2,6 @@
   "name": "ecmascript-proxy-examples",
   "version": "0.0.1",
   "description": "Examples for my JS Roundabout talk about the Proxy API",
-  "main": "deleteProperty.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
