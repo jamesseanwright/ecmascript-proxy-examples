@@ -1,6 +1,6 @@
 # ECMAScript Proxy Examples
 
-Examples for my [JS Roundabout](https://www.meetup.com/The-JS-Roundabout/) talk about the Proxy API.
+Examples for my [JS Roundabout talk](https://www.youtube.com/watch?v=z9oZ7gIL1us) talk about the Proxy API.
 
 ## Examples
 
